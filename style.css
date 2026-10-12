@@ -81,13 +81,18 @@ section {
     width: 100%;
 
     img {
-        width: 15%;
+        width: 25%;
     }
 
     .project_image {
         width: 50%;
         height: auto;
     }
+}
+
+.btn {
+    padding: 10px;
+    cursor: pointer;
 }
 
 
@@ -103,7 +108,7 @@ section {
     }
 
     display: flex;
-    height: 65vh;
+    height: 57vh;
 }
 
 footer {
@@ -131,7 +136,13 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+p {
+    color: rgba(0, 0, 37, 0.815)
+}
+
+
+/* Mobile */
+@media (max-width: 650px) {
     .container {
         flex-direction: column;
         padding: 0;
@@ -152,6 +163,10 @@ footer {
         h2 {
             font-size: 30px;
         }
+
+        .project_image {
+            width: 80%;
+        }
     }
 
     .skill {
@@ -166,10 +181,13 @@ footer {
             padding: 10px;
 
         }
+
         img {
-            width: 25%;
+            width: 50%;
         }
     }
+
+
 
     #home p {
         padding-bottom: 10vh;
