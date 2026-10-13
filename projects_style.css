@@ -8,9 +8,16 @@
     --light_bg: white;
     --paragraph: rgb(36, 36, 36);
     --grad: rgba(0, 193, 241, 0.562);
-    --border: #d0d3da;
+    --border: #b8bac0;
 
 }
+
+body {
+    background-image: linear-gradient(120deg, rgb(226, 226, 245), rgba(164, 164, 255, 0.466));
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+
 
 * {
     margin: 0;
@@ -27,7 +34,6 @@ h2 {
 }
 
 #home {
-    background-image: linear-gradient(120deg, rgb(226, 226, 245), rgba(164, 164, 255, 0.466));
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -43,6 +49,8 @@ h2 {
             color: var(--primary);
         }
     }
+
+    margin-bottom: 10px;
 }
 
 
@@ -68,14 +76,26 @@ h2 {
 }
 
 .containers {
+    background-color: white;
+    border: solid;
+    border-color: var(--border);
+    border-width: 1px;
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 24px;
     padding: 30px;
     max-width: 1400px;
     margin: 0 auto;
+    height: 55vh;
+    transition: transform 0.1s ease,
+        box-shadow 0.2s ease;
+}
+.containers:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(13, 1, 77, 0.12);
 }
 
 #projects {
@@ -84,10 +104,15 @@ h2 {
     align-items: center;
     justify-content: center;
 
+    h2 {
+        padding-bottom: 30px;
+    }
+
     img {
         width: 40%;
     }
 }
+
 
 /* Project images: consistent size regardless of resolution */
 #projects img,
@@ -106,8 +131,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 gap: 20px;
-padding-top: 20px;
-padding-bottom: 20px;
+padding-top: 10%;
+padding-bottom: 10%;
 }
 
 .btn {
@@ -130,10 +155,11 @@ padding-bottom: 20px;
 }
 
 footer {
+    background-color: white;
     display: flex;
     flex-direction: column;
     font-size: 12px;
-    position: fixed;
+    position: static;
 
     h1 {
         font-size: 16px;
@@ -145,6 +171,6 @@ footer {
     border-color: var(--border);
     border-width: 1px;
     border-radius: 10px;
-    margin: 10px;
+    margin: 10px auto;
     padding: 10px;
 }
