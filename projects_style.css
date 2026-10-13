@@ -1,0 +1,13 @@
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+
+    --primary: #4361ee;
+    --secondary: #0d014d;
+
+    /* Light mode */
+    --light_bg: white;
+    --paragraph: rgb(36, 36, 36);
+    --grad: rgba(0, 193, 241, 0.562);
+    --border: #d0d3da;
+
+}
