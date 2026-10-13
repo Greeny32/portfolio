@@ -11,3 +11,140 @@
     --border: #d0d3da;
 
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    color: var(--paragraph);
+}
+
+h2 {
+    font-size: 26px;
+    color: var(--secondary);
+}
+
+#home {
+    background-image: linear-gradient(120deg, rgb(226, 226, 245), rgba(164, 164, 255, 0.466));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    padding: 20px;
+
+    h1 {
+        color: var(--secondary);
+        font-size: 56px;
+
+        .surname {
+            color: var(--primary);
+        }
+    }
+}
+
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    a {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: white;
+        padding: 10px;
+        width: 80px;
+        background-image: linear-gradient(120deg, var(--primary), var(--secondary));
+        border-radius: 20px;
+        font-weight: lighter;
+    }
+}
+
+.containers {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 40%;
+    }
+}
+
+/* Project images: consistent size regardless of resolution */
+#projects img,
+.project_image {
+width: 100%;
+height: 250px;
+object-fit: cover;
+display: block;
+border-radius: 10px;
+}
+
+/* Image container */
+.image_swap {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    background: var(--primary);
+    transition: background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--secondary);
+    transform: scale(1.08);
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    position: fixed;
+
+    h1 {
+        font-size: 16px;
+    }
+
+    height: 13vh;
+    width: 95vw;
+    border: solid;
+    border-color: var(--border);
+    border-width: 1px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}

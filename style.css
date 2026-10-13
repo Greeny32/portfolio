@@ -31,7 +31,7 @@ h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 20vh;
     padding: 20px;
 
@@ -49,6 +49,7 @@ h2 {
 .header {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 
     a {
@@ -63,14 +64,6 @@ h2 {
         background-image: linear-gradient(120deg, var(--primary), var(--secondary));
         border-radius: 20px;
         font-weight: lighter;
-    }
-}
-
-.contact {
-    width: 25vw;
-
-    p {
-        padding-top: 10px;
     }
 }
 
