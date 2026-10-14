@@ -49,12 +49,10 @@ function change_text() {
 change_text()
 
 // Code to swap the image on the projects page. Very similar. Yes the variables are confusing...
-
-const btn_projects_left = document.getElementById("p_left").addEventListener("click", p_left);
-const btn_projects_right = document.getElementById("p_right").addEventListener("click", p_right);
 const texts_projects = document.getElementById("texts_projects");
 
 const project_image = document.getElementById("project_image");
+const mobile_swap = document.getElementById("image_swap").addEventListener("click", p_right);
 
 const f1_txt = "I created this in late 2023 using Python. It was my first time using Object Oriented Programming and API's. It renders graphs of F1 timings for every session and weekend in the season."
 const crm_txt = "For my A-Level Computer Science coursework I created a <strong>Racing Car Management</strong> style game using Python. Inspired by other games such as Football Manager and F1 Manager. It allows users to control 1 of 10 teams, upgrade their cars and simulate races."

@@ -122,6 +122,23 @@ h2 {
 
     a {
         text-decoration: none;
+        width: 100%;
+        height: 100%
+    }
+
+    p {
+        padding-bottom: 5%;
+    }
+
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 12px;
+        display: block;
+        flex-shrink: 0;
+        transition: transform 0.3s ease;
     }
 }
 
@@ -138,18 +155,9 @@ h2 {
     margin-top: 10px;
 
     img {
-        width: 30%;
+        width: 20%;
     }
 
-}
-
-.p_projects {
-    padding-bottom: 5%;
-}
-
-.project_image {
-    width: 95%;
-    border-radius: 10px;
 }
 
 .image_swap {
@@ -186,8 +194,6 @@ h2 {
     background: var(--secondary);
     transform: scale(1.08);
 }
-
-
 
 img {
     transition: 0.2s ease;
@@ -278,7 +284,6 @@ footer {
     transform: scale(0.95);
 }
 
-
 @media (max-width: 650px) {
     .containers {
         flex-direction: column;
@@ -314,7 +319,7 @@ footer {
         display: flex;
 
         .mobile_project_image {
-            width: 70%;
+            width: 100%;
         }
     }
 
@@ -361,6 +366,17 @@ footer {
         gap: 20px;
         padding-top: 70px;
         padding-bottom: 70px;
+    }
+
+    #mobile_projects {
+        .mobile_swap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: red;
+            width: 100%;
+            height: 100%;
+        }
     }
 }
 
