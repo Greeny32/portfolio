@@ -9,11 +9,13 @@ const html_txt = "<strong>HTML</strong> was one of the first 'languages' I ever 
 const java_text = "I have a basic knowledge of <strong>Java</strong> after studying it in first-year."
 const sql_text = "I learned <strong>SQL</strong> and databases at both A-Level and level 4. It is one of my strongest areas."
 const typescript_text = "As I make this (October 2026) we are currently being taught <strong>Typescript</strong>. It is very similar to JS, which I am already good at. I will be making a project using this later in the semester."
+const cisco_text = "At level 4, we had a hands-on module dedicated to <strong>Cisco</strong>. We followed their courses on cloud computing and cyber security. Finally we got hands on use with real Cisco equiptment in our lab as well as simulating it using Packet Tracer."
+
 
 const skill_image = document.getElementById("img_skill");
 
-const skills = ["python", "html", "java", "sql", "typescript"];
-const skills_text = [python_txt, html_txt, java_text, sql_text, typescript_text];
+const skills = ["python", "cisco", "html", "java", "typescript", "sql"];
+const skills_text = [python_txt, cisco_text, html_txt, java_text, typescript_text, sql_text];
 var pointer = 0;
 
 function left() {
