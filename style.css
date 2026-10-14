@@ -16,7 +16,8 @@ body {
     background-image: linear-gradient(120deg, rgb(226, 226, 245), rgba(164, 164, 255, 0.466));
     background-repeat: no-repeat;
     background-position: fixed;
-    
+
+
 }
 
 
@@ -50,6 +51,10 @@ h2 {
         .surname {
             color: var(--primary);
         }
+    }
+
+    p {
+        padding-bottom: 5%;
     }
 }
 
@@ -133,7 +138,7 @@ h2 {
     margin-top: 10px;
 
     img {
-        width: 20%;
+        width: 30%;
     }
 
 }
@@ -158,12 +163,14 @@ h2 {
 }
 
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
-    font-size: 10px;
     font-weight: bold;
     color: white;
     background: var(--primary);
@@ -171,9 +178,23 @@ h2 {
         transform 0.2s ease;
 }
 
+.icon_left {
+    transform: scaleX(-1);
+}
+
 .btn:hover {
     background: var(--secondary);
     transform: scale(1.08);
+}
+
+
+
+img {
+    transition: 0.2s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
 }
 
 
@@ -188,7 +209,7 @@ footer {
         font-size: 16px;
     }
 
-    height: 13vh;
+    height: 9vh;
     width: 95vw;
     border: solid;
     border-color: var(--border);
@@ -198,19 +219,80 @@ footer {
     padding: 10px;
 }
 
-.mobile_projects {
+#mobile_projects {
     display: none;
 }
 
-@media (max-width: 600px) {
-    section {
-        border: solid;
-        border-color: var(--border);
-        border-width: 1px;
+/* adapted From Uiverse.io by adamgiebl */
+.desktop_projects {
+    background: var(--primary);
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em var(--secondary);
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+.desktop_projects .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em var(--secondary);
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.desktop_projects:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.desktop_projects .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: var(--secondary);
+}
+
+.desktop_projects:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.desktop_projects:active .icon {
+    transform: scale(0.95);
+}
+
+
+@media (max-width: 650px) {
+    .containers {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 20px;
+        height: auto;
+        padding: 15px;
+        animation: none;
     }
 
     #home {
         height: 100vh;
+
         .desktop_projects {
             display: none;
         }
@@ -228,12 +310,65 @@ footer {
         display: none;
     }
 
-    #about,
     #mobile_projects {
-        scroll-margin-top: 35px;
-        padding-top: 50px;
-        height: 100vh;
+        display: flex;
+
+        .mobile_project_image {
+            width: 70%;
+        }
     }
 
+    #about,
+    #mobile_projects {
+        box-sizing: border-box;
+        flex: none;
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+        padding: 30px 15px;
+        scroll-margin-top: 20px;
+
+        h2 {
+            font-size: 35px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    #about {
+        img {
+            width: 40%;
+        }
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+
+    .btn:hover {
+        font-size: 28px;
+    }
+
+    .image_swap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+
+@media (max-width: 420px) {
+    #home {
+        h1 {
+            font-size: 42px;
+        }
+    }
 
 }

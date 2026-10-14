@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="projects_style.css">
-    <script src="projects_script.js" defer></script>
+    <script src="projects_script.js " defer></script>
 </head>
 
 <body>
@@ -14,7 +14,18 @@
         <div class="header">
             <h1>Thomas <span class="surname">Green</span></h1>
             <p>Projects</p>
-            <a href="index.html">Home</a>
+
+            <!-- Adapted From Uiverse.io by adamgiebl -->
+            <button class="btn_home" onclick="window.location.href='index.html'">
+                Home
+                <div class="icon">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </div>
+            </button>
         </div>
     </section>
 
@@ -24,10 +35,22 @@
             <p>I have made many projects in my 5 years programming, I will show the best few below.</p><br>
             <div class="skill" id="skill">
                 <div class="image_swap">
-                    <button id="p_left" class="btn"><
+                    <button id="p_left" class="btn">
+                        <svg class="icon_left" height="24" width="24" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"></path>
+                        </svg>
                     </button>
                     <img id="project_image" class="project_image" src="img/projects/f1.png">
-                    <button id="p_right" class="btn">></button>
+                    <button id="p_right" class="btn">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
             <p id="texts_projects">Text here</p>
