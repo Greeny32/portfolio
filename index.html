@@ -10,91 +10,90 @@
 </head>
 
 <body>
-    <section id="home" class="home">
-        <div class="header">
+    <div class="wrapper">
+        <nav>
+            <ul class="nav_list">
+                <li><a href=#home>Home</a></li>
+                <li><a href=#about>About</a></li>
+                <li><a href=#projects>Projects</a></li>
+            </ul>
+        </nav>
+
+        <section id="home" class="home">
+
             <h1>Thomas <span class="surname">Green</span></h1>
-            <p>Level 5 Software Development Student.</p>
+            <p>Software Development Student</p>
 
-            <!-- From Uiverse.io by adamgiebl -->
-            <button class="desktop_projects" onclick="window.location.href='projects.html'">
-                Projects
-                <div class="icon">
-                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0h24v24H0z" fill="none"></path>
-                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                            fill="currentColor"></path>
-                    </svg>
-                </div>
-            </button>
-            <a href="#about" class="about_mobile">About me</a>
-            <a href="#mobile_projects" class="about_mobile">Projects</a>
+        </section>
 
-        </div>
-    </section>
-
-    <div class="containers">
         <section id="about" class="about">
-            <h2>About me</h2>
+            <center>
+                <h1>About me</h1>
+            </center>
             <P>Welcome to my simple portfolio website. I am a second-year (level 5) student looking for placements,
                 internships and work experience opportunities. I am most passionate about computers and programming.
                 I also enjoy motorsport and learning how the
                 latest technology in computing can affect the cars. Below are my best skills.</P>
             <div class="skill" id="skill">
-                <div class="image_swap">
-                    <button id="left" class="btn">
-
-                        <svg class="icon_left" height="24" width="24" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                fill="currentColor"></path>
-                        </svg>
-
-                    </button>
-                    <img id="img_skill" src="img/skills/python.png">
-                    <button id="right" class="btn">
-                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-                                fill="currentColor"></path>
-                        </svg>
-                    </button>
-                </div>
+                <button id="left" class="btn">
+                    <svg class="icon_left" height="24" width="24" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </button>
+                <img id="img_skill" src="img/skills/python.png">
+                <button id="right" class="btn">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </button>
             </div>
             <p id="skills_text">Text here</p>
         </section>
 
         <section id="projects" class="projects">
-            <a href="projects.html">
-                <h2>My Projects</h2>
-                <p>Click anywhere to see my projects.</p>
-                <img src="img/code.png">
-            </a>
-        </section>
-
-        <section id="mobile_projects" class="mobile_projects">
-            <h2>Projects</h2>
-            <p>I have made many projects in my 5 years programming, click on the image to scroll.</p><br>
+            <center>
+                <h1>Projects</h1>
+                <p>I have made many projects in my 5 years programming, click on the image to scroll.</p><br>
+            </center>
             <div class="skill" id="skill">
-                <div class="image_swap" id="image_swap">
-                    <img id="project_image" class="mobile_project_image" src="img/projects/f1.png">
-                </div>
+                <button id="p_left" class="btn">
+                    <svg class="icon_left" height="24" width="24" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </button>
+                <img id="project_image" class="project_image" src="img/projects/f1.png">
+                <button id="p_right" class="btn">
+                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                            fill="currentColor"></path>
+                    </svg>
+                </button>
             </div>
             <p id="texts_projects"></p>
         </section>
-    </div>
 
-    <footer>
-        <h1>Icons used:</h1>
-        <a href="https://www.flaticon.com/free-icons/sql" title="sql icons">Sql icons created by meaicon -
-            Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/typescript" title="typescript icons">Typescript, Python and Cisco
-            icons created by Magnific - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/java" title="java icons">Java icons created by riajulislam -
-            Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by iconsimple -
-            Flaticon</a>
-    </footer>
+        <footer>
+            <h1>Icons used:</h1>
+            <a href="https://www.flaticon.com/free-icons/sql" title="sql icons">Sql icons created by meaicon -
+                Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/typescript" title="typescript icons">Typescript, Python and
+                Cisco
+                icons created by Magnific - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/java" title="java icons">Java icons created by riajulislam
+                -
+                Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by iconsimple -
+                Flaticon</a>
+        </footer>
     </div>
 </body>
 
