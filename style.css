@@ -26,6 +26,7 @@ html {
     background-repeat: no-repeat;
     font-family: "Inter", Arial, Helvetica, sans-serif;
     color: var(--paragraph);
+    scroll-behavior: smooth;
 }
 
 .wrapper {

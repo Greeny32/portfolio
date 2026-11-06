@@ -1,3 +1,22 @@
+const about_btn = document.getElementById("about_btn").addEventListener("click", display_about);
+const about_page = document.getElementById("about");
+const projects_btn = document.getElementById("projects_btn").addEventListener("click", display_projects);
+const projects_page = document.getElementById("projects");
+
+about_page.style.display = "none";
+projects_page.style.display = "none";
+
+function display_about(){
+    about_page.style.display = "flex";
+}
+function display_projects(){
+    about_page.style.display = "flex";
+    projects_page.style.display = "flex";
+}
+
+
+// below is stuff for the carousells
+
 const btn_left = document.getElementById("left");
 const btn_right = document.getElementById("right");
 const text = document.getElementById("skills_text");
