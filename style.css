@@ -21,7 +21,7 @@
 
 body,
 html {
-    background-image: linear-gradient(150deg, rgb(22, 22, 22), rgb(56, 56, 56));
+    background-image: linear-gradient(150deg, rgb(22, 22, 22), rgb(32, 31, 31));
     background-position: fixed;
     background-repeat: no-repeat;
     font-family: "Inter", Arial, Helvetica, sans-serif;
@@ -110,7 +110,7 @@ nav {
 
     h1 {
         color: var(--header-color);
-        font-size: 64px;
+        font-size: 48px;
     }
 
     .skill {
@@ -150,20 +150,46 @@ nav {
 #projects {
     height: 100vh;
     width: 100vw;
+    padding: 20px;
 
+    ;
     display: flex;
     flex-direction: column;
-
     color: var(--paragraph-muted);
 
     h1 {
         color: var(--header-color);
-        font-size: 64px;
+        font-size: 48px;
     }
 
-    * {
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
+    .skill {
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 5px;
+            margin: 20px;
+
+            background-color: var(--nav-bg);
+            border: solid;
+            border-radius: 10px;
+            border-color: var(--border);
+            border-width: 1px;
+
+            svg {
+                filter: invert(1);
+            }
+
+            .icon_left {
+                transform: scaleX(-1);
+            }
+        }
+    }
 }
