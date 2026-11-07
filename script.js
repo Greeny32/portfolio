@@ -2,16 +2,46 @@ const about_btn = document.getElementById("about_btn").addEventListener("click",
 const about_page = document.getElementById("about");
 const projects_btn = document.getElementById("projects_btn").addEventListener("click", display_projects);
 const projects_page = document.getElementById("projects");
+const pages = [false, false]; // which active
+const footer = document.getElementById("footer");
+
+// scroll wheel
+document.addEventListener("wheel", function (scroll) {
+
+    if (scroll.deltaY > 0) {
+        if (pages[0] == false) {
+            display_about();
+            about_page.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+        else if (pages[0] == true && pages[1] == false) {
+            display_projects();
+            footer.style.display = "flex"
+            projects_page.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+        }
+    }
+
+});
 
 about_page.style.display = "none";
 projects_page.style.display = "none";
+footer.style.display = "none";
 
-function display_about(){
+function display_about() {
     about_page.style.display = "flex";
+    pages[0] = true;
 }
-function display_projects(){
+function display_projects() {
+    console.log("a");
     about_page.style.display = "flex";
     projects_page.style.display = "flex";
+    pages[0] = true;
+    pages[1] = true;
 }
 
 
@@ -26,13 +56,14 @@ const p_right = document.getElementById("p_right");
 const p_img = document.getElementById("project_image");
 const p_text = document.getElementById("texts_projects");
 
-const skill_image = document.getElementById("img_skill");
+const skill_image = document.getElementById("img_skill")
 
 
 btn_left.addEventListener("click", () => left("skill"));
 btn_right.addEventListener("click", () => right("skill"));
 p_left.addEventListener("click", () => left("project"));
 p_right.addEventListener("click", () => right("project"));
+
 
 // SKILLS
 const python_txt = "My best skill is <strong>Python</strong>. I have been programming using it for over 4 years and have created multiple pieces of coursework using it at both level 3 and level 4.";
@@ -53,7 +84,7 @@ const skills_text = [
 
 let skills_pointer = 0;
 
-const f1_txt = "I created this in late 2023 using Python. It was my first time using Object Oriented Programming and API's. It renders graphs of F1 timings for every session and weekend in the season."
+const f1_txt = "I created this in late 2023 using Python and SQL. It was my first time using Object Oriented Programming and API's. It renders graphs of F1 timings for every session and weekend in the season."
 const crm_txt = "For my A-Level Computer Science coursework I created a <strong>Racing Car Management</strong> style game using Python. Inspired by other games such as Football Manager and F1 Manager. It allows users to control 1 of 10 teams, upgrade their cars and simulate races."
 const wc_txt = 'This was my first site, a World Cup fixture/result viewer. You can see it <a href="https://greeny32.github.io/wc26/">here.</a> It solved a simple problem of easily knowing which games were happening each day, as conventional alternatives shown games past midnight on the following day.'
 const wordle_txt = "To learn PyGame, I created a simple <strong>Wordle clone</strong> over a weekend. It uses an API to get a large collection of words."
