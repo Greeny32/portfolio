@@ -5,6 +5,8 @@ const projects_page = document.getElementById("projects");
 const pages = [false, false]; // which active
 const footer = document.getElementById("footer");
 
+
+
 // scroll wheel
 document.addEventListener("wheel", function (scroll) {
 
@@ -28,16 +30,25 @@ document.addEventListener("wheel", function (scroll) {
 
 });
 
-about_page.style.display = "none";
-projects_page.style.display = "none";
-footer.style.display = "none";
+
+// load all pages on mobile
+if (window.outerWidth <= 600) {
+    about_page.style.display = "flex";
+    projects_page.style.display = "flex";
+    footer.style.display = "flex";}
+else {
+    about_page.style.display = "none";
+    projects_page.style.display = "none";
+    footer.style.display = "none";
+
+}
+
 
 function display_about() {
     about_page.style.display = "flex";
     pages[0] = true;
 }
 function display_projects() {
-    console.log("a");
     about_page.style.display = "flex";
     projects_page.style.display = "flex";
     pages[0] = true;
